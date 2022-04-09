@@ -22,7 +22,9 @@ def construct_OD(process_name, from_ind, to_ind, data, airport_lst, OD):
 
 
 if __name__ == '__main__':
-    path = './data/Origin_and_Destination_Survey_DB1BMarket_2020_1.csv'
+    year = 2019
+    quarter = 3
+    path = './data/Origin_and_Destination_Survey_DB1BMarket_%i_%i.csv'%(year, quarter)
     trip_data = pd.read_csv(path)
 
     airport_lst = list(pd.read_csv('./data/airport_lst.csv', index_col=0).values.flatten())
@@ -53,5 +55,8 @@ if __name__ == '__main__':
 
     OD_set = pool.starmap(func=construct_OD, iterable=params)
 
-    # please set a breakpoint here, then store the data manually
+    for i in range(n_cpu):
+        OD_set[i].to_csv('./outputs/%i0%i_p_%i_res.csv'%(year, quarter, i))
+
+    # please set a breakpoint here, check the stored data
     print('end')
