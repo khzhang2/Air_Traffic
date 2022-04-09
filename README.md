@@ -19,5 +19,15 @@ We will utilize VAE to firstly find out the underlying features behind the obser
 
 A possible approximation approach for the target conditional distribution is to use a neural network, which is powerful enough to make an approximation for the unknown relationships between the latent features and actual flow data. The framework illustration is shown in Figure below. Since the model will involve socioeconomic data as features, we will make the encoded features as similar to the real census data as possible, i.e., to reduce the feature deviation. This step provides a guarantee that the encoded features are interpretable. On the other hand, the reconstructed OD pairs need to be similar to the real traffic demand, i.e., to reduce the reconstruction loss. Summing up the feature deviation and reconstruction deviation as a whole, we can obtain a total loss, and our objective function is to minimize the total loss. The model is trainable using backpropagation via machine learning optimization techniques such as stochastic gradient descent.
 
-<img src="demo_problem.png" width="500">
-<figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
+<img src="F1.png" width="500">
+
+Two datasets will be utilized, which are the census data and the air traffic trip data. We will use the Smart Location Data (SLD) as the census data. SLD consists of over a hundred features containing demographic data, land-use data, transit accessibility statistics and so on. The air traffic trip data can be found from the Bureau of Transportation Statistics, where we can get the passenger origin-destination trip counts for each quarter.
+
+### REFERENCE
+
+Bårli, E. M., Yazidi, A., Viedma, E. H., & Haugerud, H. (2021). DoS and DDoS mitigation using Variational Autoencoders. _Computer Networks_, 199, 108399. https://doi.org/10.1016/j.comnet.2021.108399<br>
+Boquet, G., Morell, A., Serrano, J., & Vicario, J. L. (2020). A variational autoencoder solution for road traffic forecasting systems: Missing data imputation, dimension reduction, model selection and anomaly detection. _Transportation Research Part C: Emerging Technologies_, 115, 102622. https://doi.org/10.1016/j.trc.2020.102622<br>
+Gammelli, D., Wang, Y., Prak, D., Rodrigues, F., Minner, S., & Pereira, F. C. (2021). Predictive and prescriptive performance of bike-sharing demand forecasts for inventory management. _ArXiv:2108.00858 [Cs, Math]_. http://arxiv.org/abs/2108.00858<br>
+Islam, Z., & Abdel-Aty, M. (2021). Sensor-based transportation mode recognition using variational autoencoder. _Journal of Big Data Analytics in Transportation_, 3(1), 15–26. https://doi.org/10.1007/s42421-021-00035-2<br>
+Kingma, D. P., & Welling, M. (2014). Auto-encoding variational bayes. _ArXiv:1312.6114 [Cs, Stat]_. http://arxiv.org/abs/1312.6114
+
