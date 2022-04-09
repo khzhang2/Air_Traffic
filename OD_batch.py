@@ -22,11 +22,18 @@ def construct_OD(process_name, from_ind, to_ind, data, airport_lst, OD):
 
 
 if __name__ == '__main__':
-    path = './data/Origin_and_Destination_Survey_DB1BMarket_2019_4.csv'
+    path = './data/Origin_and_Destination_Survey_DB1BMarket_2020_1.csv'
     trip_data = pd.read_csv(path)
 
     airport_lst = list(pd.read_csv('./data/airport_lst.csv', index_col=0).values.flatten())
-    num_airports = len(airport_lst)  # =437
+    for i in list(trip_data['Origin'].drop_duplicates().values.flatten()):
+        if i not in airport_lst:
+            airport_lst.append(i)
+    for i in list(trip_data['Dest'].drop_duplicates().values.flatten()):
+        if i not in airport_lst:
+            airport_lst.append(i)
+
+    num_airports = len(airport_lst)  # =437 in 201904
     # dims: (org, dest)
     OD = pd.DataFrame(index=airport_lst, columns=airport_lst)
 
@@ -34,7 +41,7 @@ if __name__ == '__main__':
     interval = len(airport_lst)//num_interval * np.arange(num_interval)
     interval = np.append(interval, len(airport_lst))
 
-    n_cpu = multiprocessing.cpu_count()
+    n_cpu = num_interval
 
     pool = Pool(processes=n_cpu)
     params = []
