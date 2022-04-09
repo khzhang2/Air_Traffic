@@ -21,7 +21,7 @@ A possible approximation approach for the target conditional distribution is to 
 
 <img src="./imgs/F1.png" width="500">
 
-Two datasets will be utilized, which are the census data and the air traffic trip data. We will use the Smart Location Data (SLD) as the census data. SLD consists of over a hundred features containing demographic data, land-use data, transit accessibility statistics and so on. The air traffic trip data can be found from the Bureau of Transportation Statistics, where we can get the passenger origin-destination trip counts for each quarter.
+Two datasets will be utilized, which are the census data and the air traffic trip data. We will use the Smart Location Data (SLD) (https://www.epa.gov/smartgrowth/smart-location-database-technical-documentation-and-user-guide) as the census data. SLD consists of over a hundred features containing demographic data, land-use data, transit accessibility statistics and so on. The air traffic trip data can be found from the Bureau of Transportation Statistics (https://transtats.bts.gov/Fields.asp?gnoyr_VQ=FHK), where we can get the passenger origin-destination trip counts for each quarter.
 
 ### REFERENCE
 
