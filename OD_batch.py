@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     num_airports = len(airport_lst)  # =437 in 201904
     # dims: (org, dest)
-    OD = pd.DataFrame(index=airport_lst, columns=airport_lst)
+    OD = pd.DataFrame(0, index=airport_lst, columns=airport_lst)
 
     num_interval = multiprocessing.cpu_count()
     interval = len(airport_lst)//num_interval * np.arange(num_interval)
@@ -56,7 +56,10 @@ if __name__ == '__main__':
     OD_set = pool.starmap(func=construct_OD, iterable=params)
 
     for i in range(n_cpu):
-        OD_set[i].to_csv('./outputs/%i0%i_p_%i_res.csv'%(year, quarter, i))
+        # OD_set[i].to_csv('./outputs/%i0%i_p_%i_res.csv'%(year, quarter, i))
+        OD += OD_set[i].fillna(0)
 
+    OD.to_csv('./outputs/%i0%i_OD.csv'%(year, quarter))
+    
     # please set a breakpoint here, check the stored data
     print('end')
