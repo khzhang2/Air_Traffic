@@ -22,12 +22,12 @@ def construct_OD(process_name, from_ind, to_ind, data, airport_lst, OD):
 
 
 if __name__ == '__main__':
-    year = 2019
-    quarter = 3
+    year = 2020
+    quarter = 2
     path = './data/Origin_and_Destination_Survey_DB1BMarket_%i_%i.csv'%(year, quarter)
     trip_data = pd.read_csv(path)
 
-    airport_lst = list(pd.read_csv('./data/airport_lst.csv', index_col=0).values.flatten())
+    airport_lst = list(pd.read_csv('./data/airport_lst_201904_org.csv', index_col=0).values.flatten())
     for i in list(trip_data['Origin'].drop_duplicates().values.flatten()):
         if i not in airport_lst:
             airport_lst.append(i)
