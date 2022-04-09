@@ -19,7 +19,7 @@ We will utilize VAE to firstly find out the underlying features behind the obser
 
 A possible approximation approach for the target conditional distribution is to use a neural network, which is powerful enough to make an approximation for the unknown relationships between the latent features and actual flow data. The framework illustration is shown in Figure 1 below. Since the model will involve socioeconomic data as features, we will make the encoded features as similar to the real census data as possible, i.e., to reduce the feature deviation. This step provides a guarantee that the encoded features are interpretable. On the other hand, the reconstructed OD pairs need to be similar to the real traffic demand, i.e., to reduce the reconstruction loss. Summing up the feature deviation and reconstruction deviation as a whole, we can obtain a total loss, and our objective function is to minimize the total loss. The model is trainable using backpropagation via machine learning optimization techniques such as stochastic gradient descent.
 
-<img src="F1.png" width="500">
+<img src="./imgs/F1.png" width="500">
 
 Two datasets will be utilized, which are the census data and the air traffic trip data. We will use the Smart Location Data (SLD) as the census data. SLD consists of over a hundred features containing demographic data, land-use data, transit accessibility statistics and so on. The air traffic trip data can be found from the Bureau of Transportation Statistics, where we can get the passenger origin-destination trip counts for each quarter.
 
