@@ -22,8 +22,8 @@ def construct_OD(process_name, from_ind, to_ind, data, airport_lst, OD):
 
 
 if __name__ == '__main__':
-    year = 2020
-    quarter = 3
+    year = 2019
+    quarter = 2
     path = './data/Origin_and_Destination_Survey_DB1BMarket_%i_%i.csv'%(year, quarter)
     trip_data = pd.read_csv(path)
 
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     # dims: (org, dest)
     OD = pd.DataFrame(0, index=airport_lst, columns=airport_lst)
 
-    num_interval = multiprocessing.cpu_count()
+    num_interval = int(multiprocessing.cpu_count()*0.9)
     interval = len(airport_lst)//num_interval * np.arange(num_interval)
     interval = np.append(interval, len(airport_lst))
 
