@@ -44,7 +44,7 @@ if __name__ == '__main__':
     # dims: (org, dest)
     OD = pd.DataFrame(0, index=airport_lst, columns=airport_lst)
 
-    num_interval = int(multiprocessing.cpu_count())
+    num_interval = int(multiprocessing.cpu_count()*0.9)
     interval = len(airport_lst)//num_interval * np.arange(num_interval)
     interval = np.append(interval, len(airport_lst))
 
