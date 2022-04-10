@@ -23,7 +23,7 @@ def construct_OD(process_name, from_ind, to_ind, data, airport_lst, OD):
 
 if __name__ == '__main__':
     year = 2020
-    quarter = 2
+    quarter = 3
     path = './data/Origin_and_Destination_Survey_DB1BMarket_%i_%i.csv'%(year, quarter)
     trip_data = pd.read_csv(path)
 
@@ -60,6 +60,6 @@ if __name__ == '__main__':
         OD += OD_set[i].fillna(0)
 
     OD.to_csv('./outputs/%i0%i_OD.csv'%(year, quarter))
-    
+
     # please set a breakpoint here, check the stored data
     print('end')
