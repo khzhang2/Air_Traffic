@@ -1,6 +1,6 @@
-from operator import index
 import numpy as np
 import pandas as pd
+import argparse
 
 import multiprocessing
 from multiprocessing import Pool
@@ -22,8 +22,16 @@ def construct_OD(process_name, from_ind, to_ind, data, airport_lst, OD):
 
 
 if __name__ == '__main__':
-    year = 2019
-    quarter = 2
+    parser = argparse.ArgumentParser(description='Obtain OD using multiple prosessors')
+    
+    parser.add_argument('--year', type=int, help='Which year', required=True)
+    parser.add_argument('--quarter', type=int, help='Which quarter', required=True)
+
+    args = parser.parse_args()
+
+    year = args.year
+    quarter = args.quarter
+    
     path = './data/Origin_and_Destination_Survey_DB1BMarket_%i_%i.csv'%(year, quarter)
     trip_data = pd.read_csv(path)
 
