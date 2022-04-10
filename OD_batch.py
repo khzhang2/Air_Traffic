@@ -5,6 +5,7 @@ import argparse
 import multiprocessing
 from multiprocessing import Pool
 
+
 def construct_OD(process_name, from_ind, to_ind, data, airport_lst, OD):
     print('Start process' + process_name)
     
