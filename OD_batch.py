@@ -38,7 +38,7 @@ if __name__ == '__main__':
     path = './data/Origin_and_Destination_Survey_DB1BMarket_%i_%i.csv'%(year, quarter)
     trip_data = pd.read_csv(path)
 
-    airport_lst = list(pd.read_csv('./data/airport_core.csv').values.flatten())
+    airport_lst = list(pd.read_csv('./data/airport_core.csv')['Airport'].values.flatten())
 
     num_airports = len(airport_lst)  # 30, # of core airports
     # dims: (org, dest)
