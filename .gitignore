@@ -3,3 +3,7 @@ data/.DS_Store
 .DS_Store
 .ipynb_checkpoints/
 data/
+!/data/us_CSA.shp
+!/data/us_CSA.shx
+!/data/us_CSA.cpg
+!/data/us_CSA.dbf
