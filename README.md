@@ -1,6 +1,6 @@
 # Air Traffic Flow Generation: A Variational Autoencoder Approach
 
-This repository provides python codes for the term project of courses CE 260 and CE 290 in UC Berkeley.
+This repository provides python codes for the term project of courses [CE 260](https://classes.berkeley.edu/content/2021-Spring-CIVENG-260-001-LEC-001) and [CE 290](https://classes.berkeley.edu/content/2022-spring-civeng-290-002-lec-002) in UC Berkeley.
 
 ## Project Proposal
 
