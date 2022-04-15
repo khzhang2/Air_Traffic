@@ -13,3 +13,4 @@ data/.DS_Store
 !/data/us_state.dbf
 !/data/CSA_df.csv
 !/data/airport_core_with_CSA.csv
+*.pyc
