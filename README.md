@@ -25,9 +25,13 @@ Two datasets will be utilized, which are the census data and the air traffic tri
 
 ### REFERENCE
 
-Bårli, E. M., Yazidi, A., Viedma, E. H., & Haugerud, H. (2021). DoS and DDoS mitigation using Variational Autoencoders. _Computer Networks_, 199, 108399. https://doi.org/10.1016/j.comnet.2021.108399<br>
-Boquet, G., Morell, A., Serrano, J., & Vicario, J. L. (2020). A variational autoencoder solution for road traffic forecasting systems: Missing data imputation, dimension reduction, model selection and anomaly detection. _Transportation Research Part C: Emerging Technologies_, 115, 102622. https://doi.org/10.1016/j.trc.2020.102622<br>
-Gammelli, D., Wang, Y., Prak, D., Rodrigues, F., Minner, S., & Pereira, F. C. (2021). Predictive and prescriptive performance of bike-sharing demand forecasts for inventory management. _ArXiv:2108.00858 [Cs, Math]_. http://arxiv.org/abs/2108.00858<br>
-Islam, Z., & Abdel-Aty, M. (2021). Sensor-based transportation mode recognition using variational autoencoder. _Journal of Big Data Analytics in Transportation_, 3(1), 15–26. https://doi.org/10.1007/s42421-021-00035-2<br>
+Bårli, E. M., Yazidi, A., Viedma, E. H., & Haugerud, H. (2021). DoS and DDoS mitigation using Variational Autoencoders. _Computer Networks_, 199, 108399. https://doi.org/10.1016/j.comnet.2021.108399
+
+Boquet, G., Morell, A., Serrano, J., & Vicario, J. L. (2020). A variational autoencoder solution for road traffic forecasting systems: Missing data imputation, dimension reduction, model selection and anomaly detection. _Transportation Research Part C: Emerging Technologies_, 115, 102622. https://doi.org/10.1016/j.trc.2020.102622
+
+Gammelli, D., Wang, Y., Prak, D., Rodrigues, F., Minner, S., & Pereira, F. C. (2021). Predictive and prescriptive performance of bike-sharing demand forecasts for inventory management. _ArXiv:2108.00858 [Cs, Math]_. http://arxiv.org/abs/2108.00858
+
+Islam, Z., & Abdel-Aty, M. (2021). Sensor-based transportation mode recognition using variational autoencoder. _Journal of Big Data Analytics in Transportation_, 3(1), 15–26. https://doi.org/10.1007/s42421-021-00035-2
+
 Kingma, D. P., & Welling, M. (2014). Auto-encoding variational bayes. _ArXiv:1312.6114 [Cs, Stat]_. http://arxiv.org/abs/1312.6114
 
