@@ -7,11 +7,11 @@ data/.DS_Store
 !/data/us_CSA.shx
 !/data/us_CSA.cpg
 !/data/us_CSA.dbf
+!/data/us_CSA.csv
 !/data/us_state.shp
 !/data/us_state.shx
 !/data/us_state.cpg
 !/data/us_state.dbf
-!/data/us_state.csv
 !/data/CSA_df.csv
 !/data/airport_core_with_CSA.csv
 *.pyc
