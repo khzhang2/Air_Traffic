@@ -73,3 +73,8 @@ def save_model(net, name):
 def get_num_fold():
     num_fold = len(next(iter(os.walk('./runs/')))[1])
     return num_fold
+
+def get_CPC(pred, labels):
+    res_min = np.concatenate([pred, labels], axis=1).min(axis=1).flatten()
+    CPC = np.sum(res_min)*2 / (np.sum(pred) + np.sum(labels))
+    return CPC
