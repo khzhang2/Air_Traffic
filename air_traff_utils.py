@@ -42,19 +42,7 @@ def setup_seed(seed):
     torch.backends.cudnn.deterministic = True
     np.random.seed(seed)
     random.seed(seed)
-
-
-def save_model(net, name):
-    num_fold = get_num_fold() + 1
-    try:
-        torch.save(net.state_dict(), './runs/run%i/%s.pth'%(num_fold, name))
-    except:
-        raise RuntimeError('No fold for this experiment created')
-
-
-def get_num_fold():
-    num_fold = len(next(iter(os.walk('./runs/')))[1])
-    return num_fold
+    
 
 def get_CPC(pred, labels):
     res_min = np.concatenate([pred, labels], axis=1).min(axis=1).flatten()
