@@ -36,24 +36,6 @@ def eliminate_nan(b):
     return c
 
 
-def normalize2D_tSNE(V):
-    V = np.array(V)
-    return ( V ) / ( V.max(0) - V.min(0) ), V.min(0), V.max(0)
-
-
-def normalize2D(V):
-    V = np.array(V)
-    return ( V - V.min(0) ) / ( V.max(0) - V.min(0) ), V.min(0), V.max(0)
-
-
-def denormalize2D(V, V_min, V_max):
-    V = np.array(V)
-    V_min = np.array(V_min)
-    V_max = np.array(V_max)
-    denormalized_V = V * (V_max - V_min) + V_min
-    return denormalized_V
-
-
 def setup_seed(seed):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)    
